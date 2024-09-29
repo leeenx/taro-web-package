@@ -1,6 +1,6 @@
 {
-  "name": "taro-web-package",
-  "version": "1.0.0",
+  "name": "web-package-taro",
+  "version": "0.0.1",
   "private": true,
   "description": "测试项目",
   "templateInfo": {
