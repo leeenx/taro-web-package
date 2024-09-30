@@ -13,6 +13,8 @@ import {
 } from '@/global';
 import type { JSXElementConstructor } from 'react';
 
+import './index.scss';
+
 export default function Index() {
   const that = useRef<Record<string, any>>({});
   const [currentComponent, setCurrentComponent] = useState<JSXElementConstructor<any> | null>(null);

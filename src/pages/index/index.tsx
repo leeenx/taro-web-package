@@ -1,6 +1,7 @@
 import * as TaroComponents from '@tarojs/components';
-import * as Taro from '@tarojs/taro';
+import Taro from '@tarojs/taro';
 import * as React from 'react';
+import * as TaroUI from 'taro-ui';
 import {
   getPageId,
   getParamsById,
@@ -14,14 +15,21 @@ import resolve, { registerToGlobleScope, registerToScope, recyleMemoCache, globa
 //@ts-ignore
 import load, { watch, fromHtml } from 'kbs-dsl-loader';
 
+import './index.scss';
+
 const { useEffect, useCallback, useRef, useState } = React;
 const { showLoading, showToast, hideLoading } = Taro;
 
 // 动态挂载 React
 registerToGlobleScope({
+  react: React,
   React,
   Taro,
-  TaroComponents
+  '@tarojs/taro': Taro,
+  TaroUI,
+  'taro-ui': TaroUI,
+  TaroComponents,
+  '@tarojs/components': TaroComponents,
 });
 
 export default function Index() {
