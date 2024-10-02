@@ -52,6 +52,8 @@ export default function Index() {
     const {
       enableCache,
       cacheCount,
+      cacheName,
+      cacheTime,
       alwaysFromHtml,
       cacheMaxSize = 50, // 默认 50M
     } = globalScope;
@@ -68,7 +70,7 @@ export default function Index() {
       return;
     }
     // 加载 dslJson
-    const dslJson = await load(dslUrl, enableCache, cacheCount, cacheMaxSize)
+    const dslJson = await load(dslUrl, enableCache, cacheName, cacheTime, cacheMaxSize);
     // 按页面注册方法
     registerById(pageId);
     const resolvedModule = resolve(dslJson, route, enableCache, cacheCount, (memoCacheStackItem: any) => {

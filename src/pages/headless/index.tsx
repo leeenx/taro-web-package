@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useRef, useState } from 'react';
 import { showLoading, showToast, hideLoading } from '@tarojs/taro';
 //@ts-ignore
-import resolve, { registerToGlobleScope, registerToScope, recyleMemoCache, globalScope } from 'kbs-dsl-resolver';
+import resolve, { recyleMemoCache, globalScope } from 'kbs-dsl-resolver';
 //@ts-ignore
 import load, { watch, fromHtml } from 'kbs-dsl-loader';
 import {
