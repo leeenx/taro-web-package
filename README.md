@@ -1,2 +1,2 @@
 # taro-web-package
-taro web分包，小程序端运行环境
+Taro 的小程序运行容器。直接运行 `npm run build` 打包 Taro 容器。

@@ -11,24 +11,21 @@ import {
 } from '@/global';
 import type { JSXElementConstructor } from 'react';
 //@ts-ignore
-import resolve, { registerToGlobleScope, registerToScope, recyleMemoCache, globalScope } from 'kbs-dsl-resolver';
+import resolve, { registerToGlobleScope, recyleMemoCache, globalScope } from 'kbs-dsl-resolver';
 //@ts-ignore
-import load, { watch, fromHtml } from 'kbs-dsl-loader';
+import load, { fromHtml } from 'kbs-dsl-loader';
 
 import './index.scss';
 
 const { useEffect, useCallback, useRef, useState } = React;
 const { showLoading, showToast, hideLoading } = Taro;
 
-// 动态挂载 React
+// 注册到全局依赖层
 registerToGlobleScope({
   react: React,
   React,
-  Taro,
   '@tarojs/taro': Taro,
-  TaroUI,
   'taro-ui': TaroUI,
-  TaroComponents,
   '@tarojs/components': TaroComponents,
 });
 
